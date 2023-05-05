@@ -24,6 +24,11 @@ GENERAL Styles
 :root {
     --main-color: #087f5b;
     --gray-color: #343a40;
+    --gray-color-5: #555;
+    --gray-color-10: #333;
+    --yellow-light-5: #fdf3e9;
+    --yellow: #e67e22;
+    --yellow-dark-5: #bb5b07;
 }
 
 * {
@@ -40,5 +45,105 @@ body {
     font-family: sans-serif;
     line-height: 1;
     font-weight: 400;
-    color: #555;
+    color: var(--gray-color-5);
+}
+
+/* 
+=================
+Section Hero  
+=================
+ */
+
+.section-hero {
+    background-color: var(--yellow-light-5);
+}
+
+.hero {
+    max-width: 130rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 9.6rem;
+    margin: 0 auto;
+    padding: 4.8rem 3.2rem 9.9rem 3.2rem;
+}
+
+.heading-primary {
+    font-size: 5.2rem;
+    color: var(--gray-color-10);
+    letter-spacing: -.5px;
+    line-height: 1.05;
+    margin-bottom: 3.2rem;
+}
+
+.hero-description {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 4.8rem;
+}
+
+.hero-img {
+    width: 100%;
+}
+
+.btn:link, .btn:visited {
+    padding: 1.8rem 3.6rem;
+    border: none;
+    text-decoration: none;
+    background-color: var(--yellow);
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.8rem;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.btn__full {
+    margin-right: 1.2rem;
+}
+
+.btn__full:hover, .btn__full:active {
+    background-color: var(--yellow-light-5);
+    box-shadow: inset 0 0 0 3px var(--yellow);
+    color: var(--yellow);
+}
+
+.btn__info:link, .btn__info:visited {
+    background-color: var(--yellow-light-5);
+    box-shadow: inset 0 0 0 3px var(--yellow);
+    color: var(--yellow);
+}
+
+.btn__info:hover, .btn__info:active{
+    background-color: var(--yellow);
+    color: var(--yellow-light-5);
+}
+
+.delivered-meals {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    margin-top: 8rem;
+}
+
+.delivered-faces {
+    display: flex;
+}
+
+.delivered-faces img {
+    height: 4.8rem;
+    width: 4.8rem;
+    border-radius: 50%;
+    margin-right: -1.2rem;
+    border: 3px solid var(--yellow-light-5);
+}
+
+.delivered-meals p {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.meals-quality {
+    color: var(--yellow-dark-5);
+    font-weight: bold;
 }
